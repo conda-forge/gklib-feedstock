@@ -4,7 +4,7 @@ set -ex
 
 
 if [[ $(uname -m) == "ppc64le" ]]; then
-      sed -i.bak 's,march=native,mcpu=native,' GKlibSystem.cmake
+      sed -i.bak 's,march=native,mcpu=powerpc64le,' GKlibSystem.cmake
 fi
 
 mkdir -p build
