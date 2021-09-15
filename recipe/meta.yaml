@@ -10,7 +10,7 @@ source:
   sha256: 52aa0d383d42360f4faa0ae9537ba2ca348eeab4db5f2dfd6343192d0ff4b833
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('gklib', max_pin='x.x') }}
 
@@ -85,3 +85,4 @@ extra:
   recipe-maintainers:
     - hadim
     - SimonBoothroyd
+    - matthiasdiener
