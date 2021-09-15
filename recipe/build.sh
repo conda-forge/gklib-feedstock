@@ -11,7 +11,7 @@ mkdir -p build
 
 pushd build
 
-cmake -DCMAKE_INSTALL_PREFIX=$PREFIX \
+cmake ${CMAKE_ARGS} \
       -DCMAKE_PREFIX_PATH=$PREFIX \
       -DDEBUG=OFF \
       -DOPENMP=set \
