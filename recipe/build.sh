@@ -4,6 +4,7 @@ set -ex
 
 
 if [[ $(uname -m) == "ppc64le" ]]; then
+      # gcc on ppc64le does not support a '-march=native' option
       sed -i.bak 's,march=native,mcpu=powerpc64le,' GKlibSystem.cmake
 fi
 
