@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/KarypisLab/GKlib/archive/METIS-v{{ version }}-DistDGL-0.5.tar.gz
   sha256: 52aa0d383d42360f4faa0ae9537ba2ca348eeab4db5f2dfd6343192d0ff4b833
+  patches:
+    - includes.diff
 
 build:
-  number: 3
+  number: 4
   run_exports:
     - {{ pin_subpackage('gklib', max_pin='x.x') }}
 
@@ -73,8 +75,8 @@ test:
     - if not exist "%LIBRARY_INC%\\ms_inttypes.h" exit 1  # [win]
     - if not exist "%LIBRARY_INC%\\ms_stat.h" exit 1  # [win]
     - if not exist "%LIBRARY_INC%\\ms_stdint.h" exit 1  # [win]
+    - if not exist "%LIBRARY_INC%\\win32\\adapt.h" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\GKlib.lib" exit 1  # [win]
-    - if not exist "%LIBRARY_LIB%\\win32\\adapt.h" exit 1  # [win]
 
 about:
   home: https://github.com/KarypisLab/GKlib/
