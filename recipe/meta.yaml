@@ -74,6 +74,7 @@ test:
     - if not exist "%LIBRARY_INC%\\ms_stat.h" exit 1  # [win]
     - if not exist "%LIBRARY_INC%\\ms_stdint.h" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\GKlib.lib" exit 1  # [win]
+    - if not exist "%LIBRARY_LIB%\\win32\\adapt.h" exit 1  # [win]
 
 about:
   home: https://github.com/KarypisLab/GKlib/
