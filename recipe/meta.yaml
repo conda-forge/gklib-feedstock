@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/KarypisLab/GKlib/archive/{{ commit }}.tar.gz
-  sha256: 52aa0d383d42360f4faa0ae9537ba2ca348eeab4db5f2dfd6343192d0ff4b833
+  sha256: e1d59de12336731e6dde8465f05de7b907fae5d72c921cffcde217a89eaab654
   patches:
     - includes.diff
 
