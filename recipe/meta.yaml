@@ -1,18 +1,19 @@
 {% set name = "gklib" %}
-{% set version = "5.1.1" %}
+{% set version = "5.1.1.post20230327" %}
+{% set commit = "8bd6bad750b2b0d90800c632cf18e8ee93ad72d7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/KarypisLab/GKlib/archive/METIS-v{{ version }}-DistDGL-0.5.tar.gz
-  sha256: 52aa0d383d42360f4faa0ae9537ba2ca348eeab4db5f2dfd6343192d0ff4b833
+  url: https://github.com/KarypisLab/GKlib/archive/{{ commit }}.tar.gz
+  sha256: e1d59de12336731e6dde8465f05de7b907fae5d72c921cffcde217a89eaab654
   patches:
     - includes.diff
 
 build:
-  number: 4
+  number: 0
   run_exports:
     - {{ pin_subpackage('gklib', max_pin='x.x') }}
 
